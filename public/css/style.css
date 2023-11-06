@@ -1,0 +1,10 @@
+.navBar {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.navBar a {
+    color: black;
+    padding: 20px;
+    text-transform: uppercase;
+}
