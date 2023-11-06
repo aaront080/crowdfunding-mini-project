@@ -13,10 +13,11 @@
 </head>
 <body>
     <div class="flex-column justify-space-around">
-        <header class="text-center p-2">
+        <header class="text-center p-2 navBar">
             <h1>Fund This Project</h1>
             <nav>
                 {{#if logged_in}}
+                <a href="/profile">Profile</a>
                 <button class="logout" id="logout">Logout<i class="bi bi-box-arrow-in-right"></i></button>
                 {{else}}
                 <a href="/login">Login</a>

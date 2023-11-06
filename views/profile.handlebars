@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Hello {{name}}. This is your profile.</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Add New Project:</h3>
+        <form class="form add-project">
+            <div class="form-input">
+                <label for="project-name">Project Name:</label>
+                <input type="text" class="form-input" id="project-name" name="project-name">
+            </div>
+            <div class="form-input">
+                <label for="project-name">Necessary Funding:</label>
+                <input type="text" class="form-input" id="project-funding" name="project-funding">
+            </div>
+            <div class="form-input">
+                <label for="project-description">Description:</label>
+                <textarea type="text" class="form-input" id="project-description" name="project-description"></textarea>
+            </div>
+            <div class="form-input">
+                <button type="submit" class="btn btn-primary">Add Project</button>
+            </div>
+        </form>
+    </div>
+
+
+    {{#if projects.length}}
+        <div class="col-md-6 projects">
+            <h3>Current Projects:</h3>
+
+            {{#each projects as |project|}}
+            <div class="row mb-2">
+                <div class="col-md-8">
+                    <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-small btn-danger" data-id="{{project.id}}">DELETE</button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
