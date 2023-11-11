@@ -13,7 +13,7 @@ const loginHandler = async (event) => {
 
         if (response.ok) {
             alert(`You're successfully logged in`)
-            document.location.replace('/');
+            document.location.replace('/profile');
         } else {
             alert(`Login failed - check your email and password`);
         }
@@ -38,7 +38,7 @@ const signUpHandler = async (event) => {
     
         if (response.ok) {
             alert(`You're successfully signed up!`);
-            document.logaction.replace('/');
+            document.logaction.replace('/profile');
         } else {
             alert(`Signup failed - check your email and password and try again`)
         }
